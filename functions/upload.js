@@ -9,6 +9,7 @@ export async function onRequestPost(context) {  // Contents of context object
      } = context;
      context.request
      const url = new URL(request.url);
+     console.log('https://telegra.ph/' + url.pathname + url.search,)
      const response = fetch('https://telegra.ph/' + url.pathname + url.search, {
          method: request.method,
          headers: request.headers,
